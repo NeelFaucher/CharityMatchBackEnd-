@@ -1,0 +1,245 @@
+body {
+    margin :0;
+    font-family: 'Roboto', arial, sans-serif;
+    color: white;
+    background: #423E3B;
+    text-shadow: 0px 0px 2px #ffffff, 0px 0px 1px #000000, 0px 0px -1px #444;;
+}
+/* header */
+
+.header{
+    padding: 20px;
+    text-align: center;
+    background: #FF8A70;
+    color: white;
+    font-size: 30px;
+}
+/*header animation*/
+.header h1 {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid rgb(255, 255, 255); /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 5s steps(40, end),
+      blink-caret .75s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: rgb(255, 255, 255); }
+  }
+
+/* center */
+
+/*instructions*/
+.instructionswrapper{
+    display: flex;
+    justify-content: center;
+}
+.tutorial{
+    height: 200px;
+    width: 300px;
+    margin: 10px;
+    background-color: #FF8A70; 
+    border-radius: 5px;
+    margin-top: 50px;
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.4);
+    /*background: linear-gradient(45deg, #FF8A70, #64148a);*/
+    background-color: #FF8A70;
+}
+
+.tutorial h2, .tutorial h4{
+    padding-top: 10px;
+    text-align: center;
+}
+
+/*searchbar and upload button*/
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+/*searchbar*/
+
+.searchbar{
+    height: 400px;
+    flex: 1 1 auto;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.4);
+}
+
+.searchtitle, .uploadtitle{
+    text-align: center;
+    border-top-left-radius:1em; 
+    border-top-right-radius:1em;
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.4);
+    background-color: #FF8A70; 
+}
+
+/*searchbar style*/
+
+form.example{
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #534f4e; 
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.4);
+}
+
+form.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 425px;
+    background: #c0bebe;
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.4);
+}
+  
+/* Style the submit button */
+form.example button {
+    float: left;
+    width: 10%;
+    padding: 10px;
+    background: #FF8A70;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none; /* Prevent double borders */
+    cursor: pointer;
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.4);
+}
+  
+form.example button:hover {
+    background: #d35f32;
+}
+  
+/* Clear floats */
+form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+/*upload button*/
+
+.upload{
+    height: 400px;
+    flex: 1 1 auto;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.4);
+}
+
+/*upload button style*/
+
+.upload-submit{
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: center;
+    align-items: center;
+    background-color: #534f4e; 
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.4);
+}
+
+.browsebtn, .submitbtn{
+    opacity: 0;
+    width: 0.1px;
+    height: 0.1px;
+    position: absolute;
+}
+
+.upload-submit label{
+
+    display: block;
+    position: relative;
+    width: 200px;
+    height: 100px;
+    border-radius: 5px;
+    background-color: #FF8A70;
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform .2s ease-out;
+    margin: 20px;
+    flex: 1 1 auto;
+  
+}
+
+.upload-submit label:hover {
+    background: #d35f32;
+}
+
+/* footer */
+
+footer {
+	position: fixed;
+	width: 100%;
+	left: 0;
+	bottom: 0;
+	background-color: #FF8A70;
+	color: white;
+	text-align: center;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+
+/*page2*/
+
+/*header*/
+
+.header2 {
+    padding: 1px;
+    text-align: center;
+    background: #FF8A70;
+    color: white;
+    font-size: 30px;
+}
+
+/*center*/
+
+.center{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.center-top, .center-bottom{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 50px;
+}
+
+.square1, .square2, .square3, .square4 {
+    height: 500px;
+    width: 500px;
+    border-radius: 5px;
+    background-color: #FF8A70 ;
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.4);
+}
+
+
+/*footer*/

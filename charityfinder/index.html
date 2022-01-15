@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" href="./images/charity.png">
+        <link href="./styles/style.css" rel="stylesheet" type="text/css" media="all"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Charity Finder</title>
+    </head>
+    <body>      
+        <div class="header">
+            <h1>WELCOME TO CHARITY-FINDER</h1>
+        </div> 
+
+        <div class="instructionswrapper">
+            <div class="tutorial"> 
+                <h2>How does it work?</h2>
+                <h4>You have two options, you can either upload an image of your belongings that you wish to donate, or search a category which you want to donate!</p>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <div class="searchbar">
+
+                <div class="searchtitle">
+                    <h2>SEARCHBAR</h2>
+                </div>
+
+                <form class="example" action="action_page.php">
+                    <input type="text" placeholder="Search.." name="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+
+            </div>
+            <div class="upload">
+
+                <div class="uploadtitle">
+                    <h2>UPLOAD</h2>
+                </div>
+
+                <form class="upload-submit"action="/action_page.php">
+                    <input class="browsebtn" type="file" id="myFile" name="filename">
+                    <label for="myFile">Select file</label>
+                    <input class="submitbtn" id="submitQuery" type="submit">
+                    <label for="submitQuery">Upload File</label>
+                </form>
+
+            </div>
+        </div>
+
+        <footer>
+            <p><a href="./pages/resultpage.html">Hackathon Project 2022</a></p>
+          </footer> 
+    </body>
+</html>
