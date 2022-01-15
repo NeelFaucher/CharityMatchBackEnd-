@@ -1,6 +1,20 @@
+import { useState } from 'react';
+import axios from 'axios';
 import './styles.css';
 
 const Body = () => {
+
+    const [file, setfile] = useState();
+    const [fileUploaded, setFileUploaded] = useState(false);
+
+    const uploadFile = (e) => {
+        const data = new FormData();
+        data.append('File', file);
+        axios.post('googleService/url', {
+            body: data
+        })
+    }
+
     return (<>
         <div className="header">
             <h1>WELCOME TO CHARITY-FINDER</h1>
@@ -20,7 +34,7 @@ const Body = () => {
                     <h2>SEARCHBAR</h2>
                 </div>
 
-                <form className="example" action="">
+                <form className="example">
                     <input type="text" placeholder="Search.." name="search" />
                     <button type="submit"><i className="fa fa-search">Search</i></button>
                 </form>
@@ -32,11 +46,14 @@ const Body = () => {
                     <h2>UPLOAD</h2>
                 </div>
 
-                <form className="upload-submit" action="">
-                    <input className="browsebtn" type="file" id="myFile" name="filename" />
+                <form className="upload-submit" onSubmit={uploadFile}>
+                    <input className="browsebtn" type="file" id="myFile" name="filename" onChange={(e) => {
+                        setfile(e.target.files[0]);
+                        setFileUploaded(true);
+                        console.log(fileUploaded);
+                    }} />
                     <label htmlFor="myFile">Select file</label>
-                    <input className="submitbtn" id="submitQuery" type="submit" />
-                    <label htmlFor="submitQuery">Upload File</label>
+                    <button type="submit" >Upload File</button>
                 </form>
 
 
