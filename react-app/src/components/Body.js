@@ -7,6 +7,8 @@ const Body = () => {
     const [file, setfile] = useState();
     const [fileUploaded, setFileUploaded] = useState(false);
 
+    const [category, setCategory] = useState('');
+
     const uploadFile = (e) => {
         const data = new FormData();
         data.append('File', file);
@@ -35,7 +37,7 @@ const Body = () => {
                 </div>
 
                 <form className="example">
-                    <input type="text" placeholder="Search.." name="search" />
+                    <input type="text" placeholder="Search.." name="search" onChange={(e) => setCategory(e.target.value)} />
                     <button type="submit"><i className="fa fa-search">Search</i></button>
                 </form>
 
